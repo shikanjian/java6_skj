@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var str="hello,js";
+        var str1=new String("hehe");
+        document.write(str.charAt(1)+"<br>");//e
+        document.write(str1.lastIndexOf("e")+"<br>");//返回指定的文本在最后一次出现的位置
+        document.write(str.fontcolor("blue")+"<br>");//设置字符颜色
+        var arr=str.split(",");//把字符串分割为字符创数组
+        for(var i in arr){
+            document.write("下标："+i+"&nbsp;"+"字符："+arr[i]+"<br>")
+        }
+        document.write(str1.substring(1,3)+"<br>");//[1,3)
+        document.write(str1.substr(2)+"<br>");//从2以后全部截取
+        document.write(str1.toUpperCase()+"<br>");
+        document.write(str.replace("js","javascript")+"<br>");
+        //String 对象
+       var s1=new String("js");
+        var s2=new String("js");
+        document.write("s1==s2?"+(s1===s2)+"<br>");//地址编号不一样false
+        var n1=new Number(10);
+        var n2=new Number(10);
+        document.write("n1==n2?"+(n1===n2)+"<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr=new Array(3);
+        arr=new Array(1,"skj",3,false);//动态初始化
+        arr=["shikangjian",2,"李思嘉"];//静态初始化
+        arr[arr.length]="男";
+        arr.push("南京大学");
+        //取出尾部元素
+        arr.pop();
+        for(var i in arr){
+            document.write("下标i="+i+"元素值："+arr[i]+"<br>");
+        }
+        //把数组转为字符串
+        var s=arr.join("--");
+        document.write(s+"<br>");
+        //字符创转为数组
+        arr1=s.split("--");
+        document.write(arr1+"<br>");
+        //倒置
+        arr1.reverse();
+        document.write(arr1+"<br>");
+        //拼接
+        var a1=[2,"admin"];
+        var a2=[false,"你大爷"];
+        var a3=a1.concat(a2);
+        document.write(a3+"<br>");
+        //截取
+        var a4=a3.slice(0,2);//返回的是一个新数组
+        document.write(a4+"<br>");
+        document.write("<hr>");
+        //比较值 a-b>0 升序 b-a>0 降序
+        function m(a,b) {
+            return a-b;
+        }
+        //比较字符串长度
+        function  m1(a,b) {
+            return a.length-b.length;
+        }
+        function f1() {
+            var a4=[12,22,34,111,23232];
+           // a4.sort();//按照字符串的形式升序
+            a4.sort(m);//数值排序，按照指定的方式排序，方法名写入
+            a4=["aaaaa","bbbb","cd","cdsfaefafa"];
+            a4.sort(m1);
+            document.write(a4+"<br>");
+        }
+        f1();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
